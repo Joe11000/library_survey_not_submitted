@@ -41,7 +41,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-
+gem 'puma'
 gem 'factory_bot_rails', group: [:development, :test]
 gem 'faker', group: [:development, :test]
 gem 'rspec-rails', group: :test
@@ -49,14 +49,14 @@ gem 'rspec'
 gem 'shoulda-matchers', group: :test
 gem 'slim-rails'
 gem 'rails-erd'
-gem 'grape'
+gem 'jquery-rails'
 
 
 # feature testing
 group :test do
-  gem 'capybara', group: :test
-  gem 'chromedriver-helper', group: :test
-  gem 'selenium-webdriver', group: :test
+  gem 'capybara'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 

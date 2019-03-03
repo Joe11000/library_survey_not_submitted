@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+  <record>
+		<title>Computer Science 1</title>
+		<author>Programmer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>020.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Computer Science 2</title>
+		<author>Programmer 1</author>
+		<pages>2</pages>
+		<dewey_decimal_code>021.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Philosophy &amp;amp; Psychology 1</title>
+		<author>Philosopher 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>120.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Philosophy &amp;amp; Psychology 2</title>
+		<author>Philosopher 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>121.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Religion 1</title>
+		<author>Religioner 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>220.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Religion 2</title>
+		<author>Religion 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>121.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Social Sciences 1</title>
+		<author>Social Sciencer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>320.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Social Sciences 2</title>
+		<author>Social Sciencer 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>321.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Language 1</title>
+		<author>Languager 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>420.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Language 2</title>
+		<author>Languager 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>421.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Pure Science 1</title>
+		<author>Pure Sciencer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>520.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Pure Science 2</title>
+		<author>Pure Sciencer 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>521.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Applied Science 1</title>
+		<author>Applied Sciencer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>620.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Applied Science 2</title>
+		<author>Applied Sciencer 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>621.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Arts &amp;amp; Recreation 1</title>
+		<author>Arts &amp;amp; Recreationer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>720.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Arts &amp;amp; Recreation 2</title>
+		<author>Arts &amp;amp; Recreationer 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>721.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>Literature 1</title>
+		<author>Literaturer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>820.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>Literature 2</title>
+		<author>Literaturer 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>821.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+	<record>
+		<title>History &amp;amp; Geography 1</title>
+		<author>History &amp;amp; Geographer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>920.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+	<record>
+		<title>History &amp;amp; Geography 2</title>
+		<author>History &amp;amp; Geographer 2</author>
+		<pages>2</pages>
+		<dewey_decimal_code>921.563DUC</dewey_decimal_code>
+		<book_read_status>Partially</book_read_status>
+	</record>
+</records>

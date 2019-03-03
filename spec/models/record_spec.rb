@@ -12,6 +12,6 @@ RSpec.describe Record, type: :model do
     it { is_expected.to validate_presence_of(:author) }
     it { is_expected.to validate_presence_of(:pages) }
     it { is_expected.to validate_presence_of(:dewey_decimal_code) }
-    it { is_expected.to define_enum_for(:book_read_status).with_values([:unread, :half_read, :finished])}
+    it { is_expected.to define_enum_for(:book_read_status).with_values([:Unread, :half_read, :Fully])}
   end
 end

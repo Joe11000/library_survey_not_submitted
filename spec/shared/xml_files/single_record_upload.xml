@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+	<record>
+    <title>Computer Science 1</title>
+		<author>Programmer 1</author>
+		<pages>1</pages>
+		<dewey_decimal_code>020.563DUC</dewey_decimal_code>
+		<book_read_status>Fully</book_read_status>
+	</record>
+</records>

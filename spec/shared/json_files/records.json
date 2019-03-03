@@ -1,0 +1,30 @@
+{
+  "records": [{
+                "title": "Presumptions of Philosophy",
+                "author": "Donald Daffy Duckworth",
+                "pages": 657,
+                "dewey_decimal_code": "120.563DUC",
+                "book_read_status": "Fully"
+              },
+              {
+                "title": "Philosophical Ponderings",
+                "author": "Mickey and Minnie Mouse",
+                "pages": 1200,
+                "dewey_decimal_code": "125.563MOU",
+                "book_read_status": "Partially"
+              },
+              {
+                "title": "Application of Natural Sciences",
+                "author": "Rick Sanchez",
+                "pages": 145,
+                "dewey_decimal_code": "601.103SAN",
+                "book_read_status": "Fully"
+              },
+              {
+                "title": "Rented and Unread",
+                "author": "Solitude O''Brien",
+                "pages": 734,
+                "dewey_decimal_code": "834.334OBR",
+                "book_read_status": "Unread"
+              }]
+}
