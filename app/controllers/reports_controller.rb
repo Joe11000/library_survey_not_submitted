@@ -12,7 +12,7 @@ class ReportsController < ApplicationController
       format.html do 
         begin
           # if only single record given, just encase it in an array to match the plural format
-          records = params['records'].is_a?(Array) ? params['records'] : [ params['records'] ]
+          records = report_params['records'].is_a?(Array) ? report_params['records'] : [ report_params['records'] ]
           @report = ReportCreator.new(records).results
           render :index 
         rescue => exception
@@ -23,17 +23,15 @@ class ReportsController < ApplicationController
   end
 
   def file_upload
-    records = nil;
 
-    records = if(params[:file].content_type == 'application/xml')
-                FileParser::XMLParser.call( params[:file].path )
-              elsif params[:file].content_type == 'text/csv'
-                FileParser::CSVParser.call( params[:file].path )
-              elsif params[:file].content_type == 'application/json'
-                FileParser::JSONParser.call( params[:file].path ) 
+    records = if(report_params[:file].content_type == 'application/xml')
+                FileParser::XMLParser.call( report_params[:file].path )
+              elsif report_params[:file].content_type == 'text/csv'
+                FileParser::CSVParser.call( report_params[:file].path )
+              elsif report_params[:file].content_type == 'application/json'
+                FileParser::JSONParser.call( report_params[:file].path ) 
               end
 
-              
     begin
       @report = ReportCreator.new(records).results
       
@@ -53,50 +51,6 @@ class ReportsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def report_params
     # params.require(:records).permit(:author, :book_read_status, :dewey_decimal_code, :pages, :title)
-    params.require(:records).permit!
+    params.permit({ reports: [:title, :author, :dewey_decimal_code, :book_read_status, :file]})
   end
 end
-
-# GET /reports
-# GET /reports.json
-# def index
-#   @reports = Report.all
-# end
-
-# # GET /reports/1
-# # GET /reports/1.json
-# def show
-# end
-
-# # GET /reports/1/edit
-# def edit
-# end
-
-# PATCH/PUT /reports/1
-# PATCH/PUT /reports/1.json
-# def update
-#   respond_to do |format|
-#     if @report.update(report_params)
-#       format.html { redirect_to @report, notice: 'Report was successfully updated.' }
-#       format.json { render :show, status: :ok, location: @report }
-#     else
-#       format.html { render :edit }
-#       format.json { render json: @report.errors, status: :unprocessable_entity }
-#     end
-#   end
-# end
-
-# # DELETE /reports/1
-# # DELETE /reports/1.json
-# def destroy
-#   @report.destroy
-#   respond_to do |format|
-#     format.html { redirect_to reports_url, notice: 'Report was successfully destroyed.' }
-#     format.json { head :no_content }
-#   end
-# end
-
-  # Use callbacks to share common setup or constraints between actions.
-  # def set_report
-  #   @report = Report.find(params[:id])
-  # end
