@@ -27,7 +27,6 @@ class ReportCreator
       end
       
       results.delete_if do |category, category_info| 
-        byebug
         category_info['pages_read'] == 0 
       end
 

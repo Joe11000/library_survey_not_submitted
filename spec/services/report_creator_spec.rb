@@ -4,7 +4,6 @@ RSpec.describe ReportCreator do
 
   context 'returns an array of hashes(records) for a' do 
     context 'multirecord file upload' do 
-      let(:file_location) { './spec/shared/json_files/multi_record_upload.json' }
       let(:params) {
           [{"author" => "Programmer 1",
                "book_read_status" => "Fully",
@@ -33,7 +32,7 @@ RSpec.describe ReportCreator do
                "title" => "Religion 1"},
                {"author" => "Religion 2",
                "book_read_status" => "Partially",
-               "dewey_decimal_code" => "121.563DUC",
+               "dewey_decimal_code" => "221.563DUC",
                "pages" => "2",
                "title" => "Religion 2"},
                {"author" => "Social Sciencer 1",
@@ -130,7 +129,7 @@ RSpec.describe ReportCreator do
       end
     end
 
-    xcontext 'single record upload' do 
+    context 'single record upload' do 
       let(:params) {
           [
             {
