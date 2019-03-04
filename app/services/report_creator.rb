@@ -18,14 +18,16 @@ class ReportCreator
       results = dewey_decimal_system_categories
       regex = /^(\d).*/
       records.each do |record|
-        dewey_decimal_category = record['dewey_decimal_code'].match(regex)[1].to_s.rjust(3, '0')
+        dewey_decimal_category = record['dewey_decimal_code'].match(regex)[1].to_s.ljust(3, '0')
         
-        pages_read_from_record = calculate_pages_read(record['pages'], record['book_read_status']).to_i
+        pages_read_from_record = calculate_pages_read(record['pages'].to_i, record['book_read_status']).to_i
+        # byebug
         total_counter += pages_read_from_record
         results[dewey_decimal_category]["pages_read"] += pages_read_from_record
       end
       
       results.delete_if do |category, category_info| 
+        byebug
         category_info['pages_read'] == 0 
       end
 
@@ -55,7 +57,7 @@ class ReportCreator
       if status == 'Fully'
         return num_of_pages 
       elsif status == 'Partially'
-        return record.pages / 2
+        return (num_of_pages / 2)
       else
         return 0
       end

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe ReportCreator do 
 
   context 'returns an array of hashes(records) for a' do 
-    xcontext 'multirecord file upload' do 
+    context 'multirecord file upload' do 
       let(:file_location) { './spec/shared/json_files/multi_record_upload.json' }
       let(:params) {
           [{"author" => "Programmer 1",
@@ -110,17 +110,27 @@ RSpec.describe ReportCreator do
       let(:expected_result) {
         {
           'category_breakdown' => {
-            '000' => { 'name' => 'Computer Science, Information & General Works', 'pages_read' => 1 },
+            '000' => { 'name' => 'Computer Science, Information & General Works', 'pages_read' => 2 },
+            '100' => { 'name' => 'Philosophy & Psychology', 'pages_read' => 2 },
+            '200' => { 'name' => 'Religion', 'pages_read' => 2 },
+            '300' => { 'name' => 'Social Sciences', 'pages_read' => 2 },
+            '400' => { 'name' => 'Language', 'pages_read' => 2 },
+            '500' => { 'name' => 'Pure Science', 'pages_read' => 2 },
+            '600' => { 'name' => 'Applied Science', 'pages_read' => 2 },
+            '700' => { 'name' => 'Arts & Recreation', 'pages_read' => 2 },
+            '800' => { 'name' => 'Literature', 'pages_read' => 2 },
+            '900' => { 'name' => 'History & Geography', 'pages_read' => 2 }
           },
-        'total_pages_read' => 55
+          'total_pages_read' => 20
         }
       }
-      it 'multi record upload' do
-        expect( FileParser::JSONParser.call file_location ).to eq expected_result
+
+      it 'returns a hash of records for a multirecord upload' do 
+        expect( ReportCreator.new(params).results ).to eq expected_result
       end
     end
 
-    context 'single record upload' do 
+    xcontext 'single record upload' do 
       let(:params) {
           [
             {
@@ -141,7 +151,7 @@ RSpec.describe ReportCreator do
         }
       }
 
-      it 'returns a hash of records for a multirecord upload' do 
+      it 'returns a hash of records for a single upload' do 
         expect( ReportCreator.new(params).results ).to eq expected_result
       end
     end

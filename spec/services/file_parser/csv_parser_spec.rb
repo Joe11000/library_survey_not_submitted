@@ -33,7 +33,7 @@ RSpec.describe FileParser::CSVParser do
                "title" => "Religion 1"},
                {"author" => "Religion 2",
                "book_read_status" => "Partially",
-               "dewey_decimal_code" => "121.563DUC",
+               "dewey_decimal_code" => "221.563DUC",
                "pages" => "2",
                "title" => "Religion 2"},
                {"author" => "Social Sciencer 1",
