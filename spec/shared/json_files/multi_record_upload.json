@@ -1,144 +1,144 @@
 {
 	"records": [
-			{
-				"title": "Computer Science 1",
-				"author": "Programmer 1",
-				"pages": "1",
-				"dewey_decimal_code": "020.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Computer Science 2",
-				"author": "Programmer 1",
-				"pages": "2",
-				"dewey_decimal_code": "021.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Philosophy &amp; Psychology 1",
-				"author": "Philosopher 1",
-				"pages": "1",
-				"dewey_decimal_code": "120.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Philosophy &amp; Psychology 2",
-				"author": "Philosopher 2",
-				"pages": "2",
-				"dewey_decimal_code": "121.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Religion 1",
-				"author": "Religioner 1",
-				"pages": "1",
-				"dewey_decimal_code": "220.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Religion 2",
-				"author": "Religion 2",
-				"pages": "2",
-				"dewey_decimal_code": "221.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Social Sciences 1",
-				"author": "Social Sciencer 1",
-				"pages": "1",
-				"dewey_decimal_code": "320.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Social Sciences 2",
-				"author": "Social Sciencer 2",
-				"pages": "2",
-				"dewey_decimal_code": "321.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Language 1",
-				"author": "Languager 1",
-				"pages": "1",
-				"dewey_decimal_code": "420.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Language 2",
-				"author": "Languager 2",
-				"pages": "2",
-				"dewey_decimal_code": "421.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Pure Science 1",
-				"author": "Pure Sciencer 1",
-				"pages": "1",
-				"dewey_decimal_code": "520.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Pure Science 2",
-				"author": "Pure Sciencer 2",
-				"pages": "2",
-				"dewey_decimal_code": "521.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Applied Science 1",
-				"author": "Applied Sciencer 1",
-				"pages": "1",
-				"dewey_decimal_code": "620.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Applied Science 2",
-				"author": "Applied Sciencer 2",
-				"pages": "2",
-				"dewey_decimal_code": "621.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Arts &amp; Recreation 1",
-				"author": "Arts &amp; Recreationer 1",
-				"pages": "1",
-				"dewey_decimal_code": "720.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Arts &amp; Recreation 2",
-				"author": "Arts &amp; Recreationer 2",
-				"pages": "2",
-				"dewey_decimal_code": "721.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "Literature 1",
-				"author": "Literaturer 1",
-				"pages": "1",
-				"dewey_decimal_code": "820.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "Literature 2",
-				"author": "Literaturer 2",
-				"pages": "2",
-				"dewey_decimal_code": "821.563DUC",
-				"book_read_status": "Partially"
-			},
-			{
-				"title": "History &amp; Geography 1",
-				"author": "History &amp; Geographer 1",
-				"pages": "1",
-				"dewey_decimal_code": "920.563DUC",
-				"book_read_status": "Fully"
-			},
-			{
-				"title": "History &amp; Geography 2",
-				"author": "History &amp; Geographer 2",
-				"pages": "2",
-				"dewey_decimal_code": "921.563DUC",
-				"book_read_status": "Partially"
-			}
-	]
+								{
+									"title": "Computer Science 1",
+									"author": "Programmer 1",
+									"pages": "1",
+									"dewey_decimal_code": "020.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Computer Science 2",
+									"author": "Programmer 1",
+									"pages": "2",
+									"dewey_decimal_code": "021.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Philosophy &amp; Psychology 1",
+									"author": "Philosopher 1",
+									"pages": "1",
+									"dewey_decimal_code": "120.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Philosophy &amp; Psychology 2",
+									"author": "Philosopher 2",
+									"pages": "2",
+									"dewey_decimal_code": "121.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Religion 1",
+									"author": "Religioner 1",
+									"pages": "1",
+									"dewey_decimal_code": "220.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Religion 2",
+									"author": "Religion 2",
+									"pages": "2",
+									"dewey_decimal_code": "221.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Social Sciences 1",
+									"author": "Social Sciencer 1",
+									"pages": "1",
+									"dewey_decimal_code": "320.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Social Sciences 2",
+									"author": "Social Sciencer 2",
+									"pages": "2",
+									"dewey_decimal_code": "321.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Language 1",
+									"author": "Languager 1",
+									"pages": "1",
+									"dewey_decimal_code": "420.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Language 2",
+									"author": "Languager 2",
+									"pages": "2",
+									"dewey_decimal_code": "421.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Pure Science 1",
+									"author": "Pure Sciencer 1",
+									"pages": "1",
+									"dewey_decimal_code": "520.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Pure Science 2",
+									"author": "Pure Sciencer 2",
+									"pages": "2",
+									"dewey_decimal_code": "521.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Applied Science 1",
+									"author": "Applied Sciencer 1",
+									"pages": "1",
+									"dewey_decimal_code": "620.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Applied Science 2",
+									"author": "Applied Sciencer 2",
+									"pages": "2",
+									"dewey_decimal_code": "621.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Arts &amp; Recreation 1",
+									"author": "Arts &amp; Recreationer 1",
+									"pages": "1",
+									"dewey_decimal_code": "720.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Arts &amp; Recreation 2",
+									"author": "Arts &amp; Recreationer 2",
+									"pages": "2",
+									"dewey_decimal_code": "721.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "Literature 1",
+									"author": "Literaturer 1",
+									"pages": "1",
+									"dewey_decimal_code": "820.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "Literature 2",
+									"author": "Literaturer 2",
+									"pages": "2",
+									"dewey_decimal_code": "821.563DUC",
+									"book_read_status": "Partially"
+								},
+								{
+									"title": "History &amp; Geography 1",
+									"author": "History &amp; Geographer 1",
+									"pages": "1",
+									"dewey_decimal_code": "920.563DUC",
+									"book_read_status": "Fully"
+								},
+								{
+									"title": "History &amp; Geography 2",
+									"author": "History &amp; Geographer 2",
+									"pages": "2",
+									"dewey_decimal_code": "921.563DUC",
+									"book_read_status": "Partially"
+								}
+							]
 }
