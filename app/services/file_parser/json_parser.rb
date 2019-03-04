@@ -7,10 +7,10 @@ module FileParser
       hash = JSON.parse(json_text)
 
       # return consistent result syntax as multi upload and single upload
-      if(hash.dig('records', 'record').is_a? Array )
-        return hash['records']['record']
+      if(hash.dig('records').is_a? Array )
+        return hash['records']
       else
-        return [ hash['records']['record'] ]
+        return [ hash['records'] ]
       end
     end
   end

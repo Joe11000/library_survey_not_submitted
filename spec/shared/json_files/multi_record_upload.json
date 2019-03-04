@@ -1,6 +1,5 @@
 {
-	"records": {
-		"record": [
+	"records": [
 			{
 				"title": "Computer Science 1",
 				"author": "Programmer 1",
@@ -141,6 +140,5 @@
 				"dewey_decimal_code": "921.563DUC",
 				"book_read_status": "Partially"
 			}
-		]
-	}
+	]
 }
