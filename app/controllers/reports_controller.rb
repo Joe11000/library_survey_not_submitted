@@ -46,9 +46,7 @@ class ReportsController < ApplicationController
         format.html { render :new, error: 'Invalid Records Entered' }
         format.json { render status: :unprocessable_entity }
       end    
-    end
-  
-    render :index
+    end  
   end
   
   private

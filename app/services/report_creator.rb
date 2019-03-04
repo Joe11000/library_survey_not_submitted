@@ -50,7 +50,6 @@ class ReportCreator
       }
     end
 
-
     def calculate_pages_read num_of_pages, status 
       if status == 'Fully'
         return num_of_pages 
