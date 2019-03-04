@@ -1,30 +1,9 @@
 = link_to :back, root_path
 
 h3 Report (Output):
-h4 = "Total Pages Read: #{@report['total_pages_read']}"
+p.indent-1 = "Total Pages Read: #{@report['total_pages_read']}"
 h3 By Category: 
-/ ul 
-/   li
-/     - @report.category_breakdown.each do |category_number, category_info| 
-/       li = #{category_info['name']}: #{category_info['pages_read']}
-
-
-
-/ @report = {
-/             'category_breakdown': {
-/                                 '000' => { 'name': 'Computer Science, Information & General Works', 'pages_read': 0 }
-/                                 '100' => { 'Philosophy & Psychology', 'pages_read': 0 },
-/                                 '200' => { 'Religion', 'pages_read': 0 },
-/                                 '300' => { 'Social Sciences', 'pages_read': 0 },
-/                                 '400' => { 'Language', 'pages_read': 0 },
-/                                 '500' => { 'Pure Science', 'pages_read': 0 },
-/                                 '600' => { 'Applied Science', 'pages_read': 0 },
-/                                 '700' => { 'Arts & Recreation', 'pages_read': 0 },
-/                                 '800' => { 'Literature', 'pages_read': 0 },
-/                                 '900' => { 'History & Geography', 'pages_read': 0 }
-/                               }, 
-/             'total_pages_read': total_counter
-/           }
-
-
+ul 
+  - @report['category_breakdown'].each do |category_number, category_info| 
+    li.indent-1 = "#{category_info['name']}: #{category_info['pages_read']}"
 
