@@ -1,3 +1,37 @@
 h1 Upload records for report
 
-== render 'form'
+= form_for @record, url: reports_path do |f| 
+  = f.fields_for @record do |f|
+    .record-set data-id='record-set'
+    .add-record 
+      = button_tag "Add Record", id: "add-record-button", data: {id: 'add-record-button'}
+      
+    .actions = f.submit 'Create Report',  data: {id: 'submit'}, id: 'submit'
+
+    template 
+      fieldset
+        legend New Record
+        .field
+          = f.label :title
+          = f.text_field :title, required: true, name: 'records[][title]'
+        .field
+          = f.label :author
+          = f.text_field :author, required: true, name: 'records[][author]'
+        .field
+          = f.label :pages
+          = f.number_field :pages, min: 1, step: 1, required: true, name: 'records[][pages]'
+        .field
+          = f.label :dewey_decimal_code
+          = f.text_field :dewey_decimal_code, required: true, name: 'records[][dewey_decimal_code]'
+        .field 
+          = f.select 'book_read_status', options_for_select(book_read_status__options_for_select),  name: 'records[][book_read_status]'
+        .field  
+          = button_tag "delete", data: {class: 'delete-record-button'}
+        .field
+          = button_tag :reset, type: :reset
+
+fieldset
+  legend Upload Records File (JSON, XML, CSV)
+  = form_tag upload_records_file_path, {multipart: true, method: :post} do 
+    = file_field_tag :file
+    = submit_tag "Create Report"
