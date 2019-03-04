@@ -13,16 +13,16 @@ class ReportsController < ApplicationController
     
      @records = {
                    category_breakdown: {
-                                        '000' => { 'name': 'Computer Science, Information & General Works', 'pages_read': 1 },
-                                        '100' => { 'name': 'Philosophy & Psychology', 'pages_read': 2 },
-                                        '200' => { 'name': 'Religion', 'pages_read': 3 },
-                                        '300' => { 'name': 'Social Sciences', 'pages_read': 4 },
-                                        '400' => { 'name': 'Language', 'pages_read': 5 },
-                                        '500' => { 'name': 'Pure Science', 'pages_read': 6 },
-                                        '600' => { 'name': 'Applied Science', 'pages_read': 7 },
-                                        '700' => { 'name': 'Arts & Recreation', 'pages_read': 8 },
-                                        '800' => { 'name': 'Literature', 'pages_read': 9 },
-                                        '900' => { 'name': 'History & Geography', 'pages_read': 10 }
+                                        '000' => { 'name' => 'Computer Science, Information & General Works', 'pages_read' => 1 },
+                                        '100' => { 'name' => 'Philosophy & Psychology', 'pages_read' => 2 },
+                                        '200' => { 'name' => 'Religion', 'pages_read' => 3 },
+                                        '300' => { 'name' => 'Social Sciences', 'pages_read' => 4 },
+                                        '400' => { 'name' => 'Language', 'pages_read' => 5 },
+                                        '500' => { 'name' => 'Pure Science', 'pages_read' => 6 },
+                                        '600' => { 'name' => 'Applied Science', 'pages_read' => 7 },
+                                        '700' => { 'name' => 'Arts & Recreation', 'pages_read' => 8 },
+                                        '800' => { 'name' => 'Literature', 'pages_read' => 9 },
+                                        '900' => { 'name' => 'History & Geography', 'pages_read' => 10 }
                                       },
                    total_pages_read: 55
                  }
@@ -30,7 +30,7 @@ class ReportsController < ApplicationController
     respond_to do |format|
       format.html do 
         begin
-          @report = ReportCreater.call(records)
+          @report = ReportCreator.call(records)
           format.html { render :index }
         rescue => exception
           redirect_to :new, error: "Invalid Format Information", status: :unprocessable_entity
@@ -53,7 +53,7 @@ class ReportsController < ApplicationController
                 FileParser::JSONParser.call( params[:file].path ) 
               end
 
-    @report = ReportCreater.call(records)
+    @report = ReportCreator.call(records)
 
     render :index
   end
