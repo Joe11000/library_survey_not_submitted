@@ -70,115 +70,118 @@ RSpec.describe "ReportUploaders", type: :system do
         tests_for_multiple_records
       end
     end
-  end
 
-  context 'file upload form submission', js: true do 
-    context 'csv file' do 
-      context 'with a single record' do 
-        it 'tests_for_single_record' do 
-          visit root_path
-
-          find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'single_record_upload.csv' )
-          click_button('Upload File')
-
-          tests_for_single_record
+    context 'upload a file', js: true do 
+      context 'csv file' do 
+        context 'with a single record' do 
+          it 'tests_for_single_record' do 
+            visit root_path
+  
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'single_record_upload.csv' )
+            click_button('Upload File')
+  
+            tests_for_single_record
+          end
+        end
+        context 'with multiple records' do 
+          it 'tests_for_multi_record' do 
+            visit root_path
+  
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'multi_record_upload.csv' )
+            click_button('Upload File')
+  
+            tests_for_multiple_records
+          end
         end
       end
-      context 'with multiple records' do 
-        it 'tests_for_multi_record' do 
-          visit root_path
-
-          find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'multi_record_upload.csv' )
-          click_button('Upload File')
-
-          tests_for_multiple_records
+  
+      context 'json file' do 
+        context 'with a single record' do 
+          it 'tests_for_single_record' do 
+            visit root_path
+  
+            find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'single_record_upload.json' )
+            click_button('Upload File')
+  
+            tests_for_single_record
+          end
+        end
+        xcontext 'with multiple records' do 
+          it 'tests_for_multiple_records' do 
+            visit root_path
+  
+            find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'multi_record_upload.json' )
+            click_button('Upload File')
+  
+            tests_for_multiple_records
+          end
+        end
+      end
+  
+      context 'xml file' do 
+        context 'with a single record' do 
+          it 'tests_for_single_record' do 
+            visit root_path
+  
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'single_record_upload.xml' )
+            click_button('Upload File')
+  
+            tests_for_single_record
+          end
+        end
+        context 'with multiple records' do 
+          it 'tests_for_multiple_records' do 
+            visit root_path
+  
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'multi_record_upload.xml' )
+            click_button('Upload File')
+  
+            tests_for_multiple_records
+          end
         end
       end
     end
-    context 'json file' do 
-      context 'with a single record' do 
-        it 'tests_for_single_record' do 
-          visit root_path
 
-          find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'single_record_upload.json' )
-          click_button('Upload File')
-
-          tests_for_single_record
-        end
-      end
-      xcontext 'with multiple records' do 
-        it 'tests_for_multiple_records' do 
-          visit root_path
-
-          find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'multi_record_upload.json' )
-          click_button('Upload File')
-
-          tests_for_multiple_records
-        end
-      end
-    end
-
-    context 'xml file' do 
-      context 'with a single record' do 
-        it 'tests_for_single_record' do 
-          visit root_path
-
-          find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'single_record_upload.xml' )
-          click_button('Upload File')
-
-          tests_for_single_record
-        end
-      end
-      context 'with multiple records' do 
-        it 'tests_for_multiple_records' do 
-          visit root_path
-
-          find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'multi_record_upload.xml' )
-          click_button('Upload File')
-
-          tests_for_multiple_records
-        end
-      end
-    end
-  end
-
-  context 'testing js on screen', js: true do 
-    it 'can\'t remove record if only one exist'  do 
-      visit root_path
-
-      expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 1)      
-
-      click_button 'delete'
-      expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 1)      
-    end
-
-    it 'can remove a record from the if multiple exist'  do 
-      visit root_path
-
-      find('#add_record_button').click
-      expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 2)
-      
-      fieldsets = page.find_all('fieldset')
-      within fieldsets[1] do 
-        fill_in 'record_title', with: "title1"
-      end
-      
-      within fieldsets[0] do 
-        fill_in 'record_title', with: "title0"
+    context 'munipulate the screen with js', js: true do 
+      it 'can\'t remove record if only one exist'  do 
+        visit root_path
+  
+        expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 1)      
+  
         click_button 'delete'
+        expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 1)      
       end
-
-      expect(page).to have_css('#manual_record_creation_form fieldset', count: 1)
-
-      expect(page).to have_field 'record_title', with: "title1"
-      expect(page).to have_no_field 'record_title', with: "title0"
-    end
-    
-    it 'can add a record from the form' do 
-      visit root_path
-      expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 1)      
-      find('#add_record_button').click
-      expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 2)      
+  
+      it 'can remove a record from the if multiple exist'  do 
+        visit root_path
+  
+        find('#add_record_button').click
+        expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 2)
+        
+        fieldsets = page.find_all('fieldset')
+        within fieldsets[1] do 
+          fill_in 'record_title', with: "title1"
+        end
+        
+        within fieldsets[0] do 
+          fill_in 'record_title', with: "title0"
+          click_button 'delete'
+        end
+  
+        expect(page).to have_css('#manual_record_creation_form fieldset', count: 1)
+  
+        expect(page).to have_field 'record_title', with: "title1"
+        expect(page).to have_no_field 'record_title', with: "title0"
+      end
+      
+      it 'can add a record from the form' do 
+        visit root_path
+        expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 1)      
+        find('#add_record_button').click
+        expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 2)      
+      end
     end
   end
+
+
 end
