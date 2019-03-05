@@ -100,8 +100,8 @@ RSpec.describe "Reports", type: :request do
             
             post reports_path , params: params, headers: headers
             expect(JSON.parse(response.body)).to eq expected_result.deep_stringify_keys
+        	end
         end
-      end
         
         describe 'xml file' do 
           it 'with a single record upload' do 
@@ -129,7 +129,71 @@ RSpec.describe "Reports", type: :request do
             
             post reports_path , params: params, headers: headers
             expect(JSON.parse(response.body)).to eq expected_result
-          end
+					end
+					
+					it 'with multiple records' do 
+            xml_file_location = Rails.root.join( 'spec',  'fixtures', 'request_bodies', 'xml_files', 'multi_record_upload.xml' )
+            mime_type = 'text/xml'
+            upload_file = Rack::Test::UploadedFile.new(xml_file_location, mime_type)
+            
+            params =  {
+              'records' => { 'file' => upload_file }
+            }
+
+            expected_result =  {
+                                  "category_breakdown": {
+                                      "100": {
+                                          "name": "Philosophy & Psychology",
+                                          "pages_read": 2
+                                      },
+                                      "200": {
+                                          "name": "Religion",
+                                          "pages_read": 2
+                                      },
+                                      "300": {
+                                          "name": "Social Sciences",
+                                          "pages_read": 2
+                                      },
+                                      "400": {
+                                          "name": "Language",
+                                          "pages_read": 2
+                                      },
+                                      "500": {
+                                          "name": "Pure Science",
+                                          "pages_read": 2
+                                      },
+                                      "600": {
+                                          "name": "Applied Science",
+                                          "pages_read": 2
+                                      },
+                                      "700": {
+                                          "name": "Arts & Recreation",
+                                          "pages_read": 2
+                                      },
+                                      "800": {
+                                          "name": "Literature",
+                                          "pages_read": 2
+                                      },
+                                      "900": {
+                                          "name": "History & Geography",
+                                          "pages_read": 2
+                                      },
+                                      "000": {
+                                          "name": "Computer Science, Information & General Works",
+                                          "pages_read": 2
+                                      }
+                                  },
+                                  "total_pages_read": 20
+                              }
+            
+            headers = {
+                        "ACCEPT" => "application/json",     # This is what Rails 4 accepts
+                        "CONTENT_TYPE" => "text/xml"
+                      }
+            
+            post reports_path , params: params, headers: headers
+            expect(JSON.parse(response.body)).to eq expected_result.deep_stringify_keys
+        	end
         end
         
         describe 'csv file' do 
@@ -158,7 +222,71 @@ RSpec.describe "Reports", type: :request do
             
             post reports_path , params: params, headers: headers
             expect(JSON.parse(response.body)).to eq expected_result
-          end
+					end
+					
+					it 'with multiple records' do 
+            csv_file_location = Rails.root.join( 'spec',  'fixtures', 'request_bodies', 'csv_files', 'multi_record_upload.csv' )
+            mime_type = 'text/csv'
+            upload_file = Rack::Test::UploadedFile.new(csv_file_location, mime_type)
+            
+            params =  {
+              'records' => { 'file' => upload_file }
+            }
+
+            expected_result =  {
+                                  "category_breakdown": {
+                                      "100": {
+                                          "name": "Philosophy & Psychology",
+                                          "pages_read": 2
+                                      },
+                                      "200": {
+                                          "name": "Religion",
+                                          "pages_read": 2
+                                      },
+                                      "300": {
+                                          "name": "Social Sciences",
+                                          "pages_read": 2
+                                      },
+                                      "400": {
+                                          "name": "Language",
+                                          "pages_read": 2
+                                      },
+                                      "500": {
+                                          "name": "Pure Science",
+                                          "pages_read": 2
+                                      },
+                                      "600": {
+                                          "name": "Applied Science",
+                                          "pages_read": 2
+                                      },
+                                      "700": {
+                                          "name": "Arts & Recreation",
+                                          "pages_read": 2
+                                      },
+                                      "800": {
+                                          "name": "Literature",
+                                          "pages_read": 2
+                                      },
+                                      "900": {
+                                          "name": "History & Geography",
+                                          "pages_read": 2
+                                      },
+                                      "000": {
+                                          "name": "Computer Science, Information & General Works",
+                                          "pages_read": 2
+                                      }
+                                  },
+                                  "total_pages_read": 20
+                              }
+            
+            headers = {
+                        "ACCEPT" => "application/json",     # This is what Rails 4 accepts
+                        "CONTENT_TYPE" => "text/csv"
+                      }
+            
+            post reports_path , params: params, headers: headers
+            expect(JSON.parse(response.body)).to eq expected_result.deep_stringify_keys
+        	end
         end
       end
     end

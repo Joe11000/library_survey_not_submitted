@@ -7,7 +7,7 @@ class ReportCreator
   end
 
   def results 
-    get_breakdown_of_pages_read_per_category
+    @results ||= get_breakdown_of_pages_read_per_category
   end
 
   private 
