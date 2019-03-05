@@ -17,7 +17,18 @@ RSpec.describe "ReportUploaders", type: :system do
   end
 
   def tests_for_multiple_records
-
+    expect(page).to have_content 'Total Pages Read: 20'
+    expect(page).to have_content 'Computer Science, Information & General Works: 2'
+    expect(page).to have_content 'Philosophy & Psychology: 2'
+    expect(page).to have_content 'Religion: 2'
+    expect(page).to have_content 'Social Sciences: 2'
+    expect(page).to have_content 'Language: 2'
+    expect(page).to have_content 'Pure Science: 2'
+    expect(page).to have_content 'Applied Science: 2'
+    expect(page).to have_content 'Arts & Recreation: 2'
+    expect(page).to have_content 'Literature: 2'
+    expect(page).to have_content 'History & Geography: 2'
+    expect(page).to have_css(".dewey_decimal_category", count: 10)
   end
 
   def fill_out_record_form records_arr
@@ -49,7 +60,7 @@ RSpec.describe "ReportUploaders", type: :system do
         tests_for_single_record
       end
 
-      xit 'multiple records and see the correct results' do 
+      it 'multiple records and see the correct results' do 
         visit root_path
 
         fill_out_record_form( get_multiple_records )
@@ -73,7 +84,7 @@ RSpec.describe "ReportUploaders", type: :system do
           tests_for_single_record
         end
       end
-      xcontext 'with multiple records' do 
+      context 'with multiple records' do 
         it 'tests_for_multi_record' do 
           visit root_path
 
@@ -118,7 +129,7 @@ RSpec.describe "ReportUploaders", type: :system do
           tests_for_single_record
         end
       end
-      xcontext 'with multiple records' do 
+      context 'with multiple records' do 
         it 'tests_for_multiple_records' do 
           visit root_path
 
@@ -130,8 +141,6 @@ RSpec.describe "ReportUploaders", type: :system do
       end
     end
   end
-
-
 
   context 'testing js on screen', js: true do 
     it 'can\'t remove record if only one exist'  do 
