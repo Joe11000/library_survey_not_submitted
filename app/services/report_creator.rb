@@ -17,9 +17,9 @@ class ReportCreator
       total_pages_read = 0
       results = dewey_decimal_system_categories
       regex = /^(\d).*/
+      
       records.each do |record|
         dewey_decimal_category = record['dewey_decimal_code'].match(regex)[1].to_s.ljust(3, '0')
-        
         pages_read_from_record = calculate_pages_read(record['pages'].to_i, record['book_read_status']).to_i
         total_pages_read += pages_read_from_record
         results[dewey_decimal_category]["pages_read"] += pages_read_from_record

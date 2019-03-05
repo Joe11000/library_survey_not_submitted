@@ -13,10 +13,10 @@ $(() => {
     $add_record_button.click();
     
     // delete local record from form (if more than one exists)
-    $('form').on('click', "[data-class='delete-record-button']", (e) => {
+    $('form').on('click', "[data-class='delete_record_button']", (e) => {
       e.preventDefault();
       
-      if($("[data-id='new-record'] fieldset").length > 1) {
+      if($("[data-id='manual_record_creation_form'] fieldset").length > 1) {
         e.target.closest('fieldset').remove();
       }
     })
