@@ -106,7 +106,7 @@ RSpec.describe "ReportUploaders", type: :system do
             tests_for_single_record
           end
         end
-        xcontext 'with multiple records' do 
+        context 'with multiple records' do 
           it 'tests_for_multiple_records' do 
             visit root_path
   
@@ -182,6 +182,4 @@ RSpec.describe "ReportUploaders", type: :system do
       end
     end
   end
-
-
 end
