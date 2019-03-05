@@ -38,10 +38,10 @@ class ReportsController < ApplicationController
   private
 
   def form_submission_params
-    params.permit({ records: [:title, :author, :dewey_decimal_code, :book_read_status]})
+    params.permit({ records: [ :author, :book_read_status, :dewey_decimal_code, :pages, :title ]})
   end
 
   def file_upload_params
-    params.require(:records).permit(:file)
+    params.permit({ records: [ :file ] })
   end
 end
