@@ -19,6 +19,7 @@ class ReportsController < ApplicationController
               end
 
     begin
+      byebug
       @report = ReportCreator.new(records).results
       
       respond_to do |format|

@@ -1,5 +1,5 @@
 class Record < ApplicationRecord
-  enum book_read_status: [:Unread, :Partially, :fully]
+  enum book_read_status: [:unread, :partially, :fully]
 
   validates :author, presence: true
   validates :title, presence: true

@@ -12,7 +12,7 @@
 		<author>Programmer 1</author>
 		<pages>2</pages>
 		<dewey_decimal_code>021.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Philosophy &amp;amp; Psychology 1</title>
@@ -26,7 +26,7 @@
 		<author>Philosopher 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>121.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Religion 1</title>
@@ -40,7 +40,7 @@
 		<author>Religion 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>221.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Social Sciences 1</title>
@@ -54,7 +54,7 @@
 		<author>Social Sciencer 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>321.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Language 1</title>
@@ -68,7 +68,7 @@
 		<author>Languager 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>421.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Pure Science 1</title>
@@ -82,7 +82,7 @@
 		<author>Pure Sciencer 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>521.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Applied Science 1</title>
@@ -96,7 +96,7 @@
 		<author>Applied Sciencer 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>621.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Arts &amp;amp; Recreation 1</title>
@@ -110,7 +110,7 @@
 		<author>Arts &amp;amp; Recreationer 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>721.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>Literature 1</title>
@@ -124,7 +124,7 @@
 		<author>Literaturer 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>821.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 	<record>
 		<title>History &amp;amp; Geography 1</title>
@@ -138,6 +138,6 @@
 		<author>History &amp;amp; Geographer 2</author>
 		<pages>2</pages>
 		<dewey_decimal_code>921.563DUC</dewey_decimal_code>
-		<book_read_status>Partially</book_read_status>
+		<book_read_status>partially</book_read_status>
 	</record>
 </records>

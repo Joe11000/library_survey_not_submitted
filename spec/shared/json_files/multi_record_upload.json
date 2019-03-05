@@ -12,7 +12,7 @@
 									"author": "Programmer 1",
 									"pages": "2",
 									"dewey_decimal_code": "021.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Philosophy &amp; Psychology 1",
@@ -26,7 +26,7 @@
 									"author": "Philosopher 2",
 									"pages": "2",
 									"dewey_decimal_code": "121.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Religion 1",
@@ -40,7 +40,7 @@
 									"author": "Religion 2",
 									"pages": "2",
 									"dewey_decimal_code": "221.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Social Sciences 1",
@@ -54,7 +54,7 @@
 									"author": "Social Sciencer 2",
 									"pages": "2",
 									"dewey_decimal_code": "321.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Language 1",
@@ -68,7 +68,7 @@
 									"author": "Languager 2",
 									"pages": "2",
 									"dewey_decimal_code": "421.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Pure Science 1",
@@ -82,7 +82,7 @@
 									"author": "Pure Sciencer 2",
 									"pages": "2",
 									"dewey_decimal_code": "521.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Applied Science 1",
@@ -96,7 +96,7 @@
 									"author": "Applied Sciencer 2",
 									"pages": "2",
 									"dewey_decimal_code": "621.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Arts &amp; Recreation 1",
@@ -110,7 +110,7 @@
 									"author": "Arts &amp; Recreationer 2",
 									"pages": "2",
 									"dewey_decimal_code": "721.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "Literature 1",
@@ -124,7 +124,7 @@
 									"author": "Literaturer 2",
 									"pages": "2",
 									"dewey_decimal_code": "821.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								},
 								{
 									"title": "History &amp; Geography 1",
@@ -138,7 +138,7 @@
 									"author": "History &amp; Geographer 2",
 									"pages": "2",
 									"dewey_decimal_code": "921.563DUC",
-									"book_read_status": "Partially"
+									"book_read_status": "partially"
 								}
 							]
 }

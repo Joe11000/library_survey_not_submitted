@@ -30,5 +30,5 @@ h1 Submit A Report
 fieldset
   legend Upload Records File (JSON, XML, CSV)
   = form_tag reports_path, { multipart: true, method: :post, id: 'file_upload_creation_form' } do 
-    = file_field_tag :file, name: 'records[file]'
-    = submit_tag 'Create Report'
+    = file_field_tag :file, name: 'records[file]', id: 'upload_file_field'
+    = submit_tag 'Create Report', id: 'upload_file_button'

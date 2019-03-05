@@ -24,10 +24,10 @@ RSpec.describe "ReportUploaders", type: :system do
     
     records_arr.each_with_index do |record, index|
       if index > 0 # add more fields for another record
-        find('#add_record_button]').click 
+        find('#add_record_button').click 
+        fieldsets = page.find("#manual_record_creation_form").all('fieldset')
       end
-      # byebug
-
+      
       fieldsets[index].find("#record_title").fill_in with: record['title']
       fieldsets[index].find("#record_author").fill_in with: record['author']
       fieldsets[index].find("#record_pages").fill_in with: record['pages'].to_i
@@ -51,7 +51,7 @@ RSpec.describe "ReportUploaders", type: :system do
       it 'multiple records and see the correct results', js: true do 
         visit root_path
 
-        fill_out_record_form([ get_multiple_records ])
+        fill_out_record_form( get_multiple_records )
 
         click_button('submit')
 
@@ -67,11 +67,10 @@ RSpec.describe "ReportUploaders", type: :system do
           visit root_path
 
           within '#file_upload_creation_form' do 
-            attach_file 'Records', Rails.root.join( 'spec', 'shared', 'csv_files', 'single_record_upload.csv' )
+            attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'single_record_upload.csv' )
+            click_button('Create Report')
           end
 
-          click_button('submit')
-  
           tests_for_single_record
         end
       end
@@ -80,10 +79,9 @@ RSpec.describe "ReportUploaders", type: :system do
           visit root_path
 
           within '#file_upload_creation_form' do 
-            attach_file 'Records', Rails.root.join( 'spec', 'shared', 'csv_files', 'multi_record_upload.csv' )
+            attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'multi_record_upload.csv' )
+            click_button('Create Report')
           end
-
-          click_button('submit')
 
           tests_for_multiple_records
         end
@@ -95,11 +93,10 @@ RSpec.describe "ReportUploaders", type: :system do
           visit root_path
 
           within '#file_upload_creation_form' do 
-            attach_file 'Records',  Rails.root.join( 'spec', 'shared', 'json_files', 'single_record_upload.json' )
+            attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'single_record_upload.json' )
+            click_button('Create Report')
           end
 
-          click_button('submit')
-  
           tests_for_single_record
         end
       end
@@ -108,10 +105,9 @@ RSpec.describe "ReportUploaders", type: :system do
           visit root_path
 
           within '#file_upload_creation_form' do 
-            attach_file 'Records', Rails.root.join( 'spec', 'shared', 'json_files', 'multi_record_upload.json' )
+            attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'json_files', 'multi_record_upload.json' )
+            click_button('Create Report')
           end
-
-          click_button('submit')
 
           tests_for_multiple_records
         end
@@ -124,10 +120,10 @@ RSpec.describe "ReportUploaders", type: :system do
           visit root_path
 
           within '#file_upload_creation_form' do 
-            attach_file 'Records', Rails.root.join( 'spec', 'shared', 'xml_files', 'single_record_upload.xml' )
+            attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'single_record_upload.xml' )
+            click_button('Create Report')
           end
 
-          click_button('submit')
   
           tests_for_single_record
         end
@@ -137,10 +133,9 @@ RSpec.describe "ReportUploaders", type: :system do
           visit root_path
 
           within '#file_upload_creation_form' do 
-            attach_file 'Records', Rails.root.join( 'spec', 'shared', 'xml_files', 'multi_record_upload.xml' )
+            attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'multi_record_upload.xml' )
+            click_button('Create Report')
           end
-
-          click_button('submit')
 
           tests_for_multiple_records
         end
