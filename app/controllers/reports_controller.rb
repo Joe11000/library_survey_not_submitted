@@ -10,7 +10,7 @@ class ReportsController < ApplicationController
     records = if file_upload?
       case file_upload_params['records']['file'].content_type 
         when 'text/xml' then  FileParser::XMLParser.call( file_upload_params['records']['file'].path )
-        when 'text/csv' then FileParser::CSVParser.call( file_upload_params['records']['file'].path )
+        when 'text/csv' then  FileParser::CSVParser.call( file_upload_params['records']['file'].path )
         when 'application/json' then FileParser::JSONParser.call( file_upload_params['records']['file'].path ) 
       end
     else # non file upload
@@ -19,7 +19,7 @@ class ReportsController < ApplicationController
   
     begin
       @report = ReportCreator.new(records).results
-      
+
       respond_to do |format|
         format.html { render :index }
         format.json { render json: @report, status: :ok }

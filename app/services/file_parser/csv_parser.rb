@@ -3,6 +3,7 @@ require 'csv'
 module FileParser
   class CSVParser
     def self.call file_location
+
       csv_text = File.read(file_location)
       csv = CSV.parse(csv_text, :headers => true)
       result = []

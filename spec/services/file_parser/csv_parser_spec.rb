@@ -4,7 +4,7 @@ RSpec.describe FileParser::CSVParser do
 
   context 'returns an array of hashes(records) for a' do
     context 'multirecord file upload' do
-      let(:file_location) { './spec/shared/csv_files/multi_record_upload.csv' }
+      let(:file_location) { './spec/fixtures/request_bodies/csv_files/multi_record_upload.csv' }
       let(:expected_result) {
           [{"author" => "Programmer 1",
                "book_read_status" => "fully",
@@ -113,7 +113,7 @@ RSpec.describe FileParser::CSVParser do
     end
 
     context 'single record upload' do
-      let(:file_location) { './spec/shared/csv_files/single_record_upload.csv' }
+      let(:file_location) { './spec/fixtures/request_bodies/csv_files/single_record_upload.csv' }
       let(:expected_result) {
           [
             {

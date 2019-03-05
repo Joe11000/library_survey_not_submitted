@@ -4,7 +4,7 @@ RSpec.describe FileParser::JSONParser do
 
   context 'returns an array of hashes(records) for a' do
     context 'multirecord file upload' do
-      let(:file_location) { './spec/shared/json_files/multi_record_upload.json' }
+      let(:file_location) { './spec/fixtures/request_bodies/json_files/multi_record_upload.json' }
       let(:expected_result) {
           [{"author" => "Programmer 1",
                "book_read_status" => "fully",
@@ -113,7 +113,7 @@ RSpec.describe FileParser::JSONParser do
     end
 
     context 'single record upload' do
-      let(:file_location) { './spec/shared/json_files/single_record_upload.json' }
+      let(:file_location) { './spec/fixtures/request_bodies/json_files/single_record_upload.json' }
       let(:expected_result) {
           [
             {

@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe "ReportUploaders", type: :system do
   
   def get_single_record 
-    FileParser::JSONParser.call( Rails.root.join( 'spec', 'shared', 'json_files', 'single_record_upload.json' ) )
+    FileParser::JSONParser.call( Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'json_files', 'single_record_upload.json' ) )
   end
 
   def get_multiple_records 
-    FileParser::JSONParser.call( Rails.root.join( 'spec', 'shared', 'json_files', 'multi_record_upload.json' ) )
+    FileParser::JSONParser.call( Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'json_files', 'multi_record_upload.json' ) )
   end
 
   def tests_for_single_record 
@@ -77,7 +77,7 @@ RSpec.describe "ReportUploaders", type: :system do
           it 'tests_for_single_record' do 
             visit root_path
   
-            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'single_record_upload.csv' )
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'csv_files', 'single_record_upload.csv' )
             click_button('Upload File')
   
             tests_for_single_record
@@ -87,7 +87,7 @@ RSpec.describe "ReportUploaders", type: :system do
           it 'tests_for_multi_record' do 
             visit root_path
   
-            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'csv_files', 'multi_record_upload.csv' )
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'csv_files', 'multi_record_upload.csv' )
             click_button('Upload File')
   
             tests_for_multiple_records
@@ -100,7 +100,7 @@ RSpec.describe "ReportUploaders", type: :system do
           it 'tests_for_single_record' do 
             visit root_path
   
-            find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'single_record_upload.json' )
+            find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'json_files', 'single_record_upload.json' )
             click_button('Upload File')
   
             tests_for_single_record
@@ -110,7 +110,7 @@ RSpec.describe "ReportUploaders", type: :system do
           it 'tests_for_multiple_records' do 
             visit root_path
   
-            find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'shared', 'json_files', 'multi_record_upload.json' )
+            find('#file_upload_creation_form').attach_file 'upload_file_field',  Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'json_files', 'multi_record_upload.json' )
             click_button('Upload File')
   
             tests_for_multiple_records
@@ -123,7 +123,7 @@ RSpec.describe "ReportUploaders", type: :system do
           it 'tests_for_single_record' do 
             visit root_path
   
-            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'single_record_upload.xml' )
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'xml_files', 'single_record_upload.xml' )
             click_button('Upload File')
   
             tests_for_single_record
@@ -133,7 +133,7 @@ RSpec.describe "ReportUploaders", type: :system do
           it 'tests_for_multiple_records' do 
             visit root_path
   
-            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'shared', 'xml_files', 'multi_record_upload.xml' )
+            find('#file_upload_creation_form').attach_file 'upload_file_field', Rails.root.join( 'spec', 'fixtures', 'request_bodies', 'xml_files', 'multi_record_upload.xml' )
             click_button('Upload File')
   
             tests_for_multiple_records
