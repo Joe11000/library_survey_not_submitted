@@ -1,9 +1,9 @@
 = link_to :back, root_path
 
 h3 Report (Output):
-p.indent-1 = "Total Pages Read: #{@report['total_pages_read']}"
+p#total-pages-read.indent-1 = "Total Pages Read: #{@report['total_pages_read']}"
 h3 By Category: 
 ul 
   - @report['category_breakdown'].each do |category_number, category_info| 
-    li.indent-1 = "#{category_info['name']}: #{category_info['pages_read']}"
+    li.dewey_decimal_category.indent-1 = "#{category_info['name']}: #{category_info['pages_read']}"
 
