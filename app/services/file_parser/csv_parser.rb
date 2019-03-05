@@ -14,3 +14,23 @@ module FileParser
   end
 end
 
+
+# csv can come in like either 
+    # { 
+    #   'records': { 
+    #                'record': {title:, ... }
+    #              }
+    # }
+
+# or
+
+    # { 
+    #   'records': { 
+    #                'record': [
+    #                             {title:, ... }, 
+    #                             {title:, ... }
+    #                           ]
+    #              }
+    # }
+
+# returns 
