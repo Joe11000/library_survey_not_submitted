@@ -51,9 +51,9 @@ class ReportCreator
     end
 
     def calculate_pages_read num_of_pages, status 
-      if status == 'Fully'
+      if status.match(/fully/)
         return num_of_pages 
-      elsif status == 'Partially'
+      elsif status.match(/partially/)
         return (num_of_pages / 2)
       else
         return 0

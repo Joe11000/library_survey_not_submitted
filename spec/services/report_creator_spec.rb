@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe ReportCreator do 
+RSpec.describe ReportCreator do
 
-  context 'returns an array of hashes(records) for a' do 
-    context 'multirecord file upload' do 
+  context 'returns an array of hashes(records) for a' do
+    context 'multirecord file upload' do
       let(:params) {
           [{"author" => "Programmer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "020.563DUC",
                "pages" => "1",
                "title" => "Computer Science 1"},
@@ -16,7 +16,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Computer Science 2"},
                {"author" => "Philosopher 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "120.563DUC",
                "pages" => "1",
                "title" => "Philosophy &amp; Psychology 1"},
@@ -26,7 +26,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Philosophy &amp; Psychology 2"},
                {"author" => "Religioner 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "220.563DUC",
                "pages" => "1",
                "title" => "Religion 1"},
@@ -36,7 +36,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Religion 2"},
                {"author" => "Social Sciencer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "320.563DUC",
                "pages" => "1",
                "title" => "Social Sciences 1"},
@@ -46,7 +46,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Social Sciences 2"},
                {"author" => "Languager 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "420.563DUC",
                "pages" => "1",
                "title" => "Language 1"},
@@ -56,7 +56,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Language 2"},
                {"author" => "Pure Sciencer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "520.563DUC",
                "pages" => "1",
                "title" => "Pure Science 1"},
@@ -66,7 +66,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Pure Science 2"},
                {"author" => "Applied Sciencer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "620.563DUC",
                "pages" => "1",
                "title" => "Applied Science 1"},
@@ -76,7 +76,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Applied Science 2"},
                {"author" => "Arts &amp; Recreationer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "720.563DUC",
                "pages" => "1",
                "title" => "Arts &amp; Recreation 1"},
@@ -86,7 +86,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Arts &amp; Recreation 2"},
                {"author" => "Literaturer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "820.563DUC",
                "pages" => "1",
                "title" => "Literature 1"},
@@ -96,7 +96,7 @@ RSpec.describe ReportCreator do
                "pages" => "2",
                "title" => "Literature 2"},
                {"author" => "History &amp; Geographer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "920.563DUC",
                "pages" => "1",
                "title" => "History &amp; Geography 1"},
@@ -124,17 +124,17 @@ RSpec.describe ReportCreator do
         }
       }
 
-      it 'returns a hash of records for a multirecord upload' do 
+      it 'returns a hash of records for a multirecord upload' do
         expect( ReportCreator.new(params).results ).to eq expected_result
       end
     end
 
-    context 'single record upload' do 
+    context 'single record upload' do
       let(:params) {
           [
             {
               "author" => "Programmer 1",
-               "book_read_status" => "Fully",
+               "book_read_status" => "fully",
                "dewey_decimal_code" => "020.563DUC",
                "pages" => "1",
                "title" => "Computer Science 1"
@@ -150,7 +150,7 @@ RSpec.describe ReportCreator do
         }
       }
 
-      it 'returns a hash of records for a single upload' do 
+      it 'returns a hash of records for a single upload' do
         expect( ReportCreator.new(params).results ).to eq expected_result
       end
     end

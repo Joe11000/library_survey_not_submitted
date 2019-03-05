@@ -1,37 +1,34 @@
-h1 Upload records for report
+h1 Submit A Report
 
-= form_for @record, url: reports_path do |f| 
-  = f.fields_for @record do |f|
-    .record-set data-id='record-set'
-    .add-record 
-      = button_tag 'Add Record', id: 'add-record-button', data: {id: 'add-record-button'}
+= form_tag reports_path, id: 'manual_record_creation_form' do |f| 
+  .record-set data-id='records'
+  .add-record 
+    = button_tag 'Add Record', id: 'add_record_button', data: { id: 'add_record_button' }
       
-    .actions = f.submit 'Create Report',  data: {id: 'submit'}, id: 'submit'
+    .actions = submit_tag 'Create Report',  data: {id: 'submit'}, id: 'submit'
 
     template 
       fieldset
         legend New Record
         .field
-          = f.label :title
-          = f.text_field :title, required: true, name: 'records[][title]'
+          = label_tag :title
+          = text_field_tag :title, '', required: true, name: 'records[][title]', id: 'record_title'
         .field
-          = f.label :author
-          = f.text_field :author, required: true, name: 'records[][author]'
+          = label_tag :author
+          = text_field_tag :author, '', required: true, name: 'records[][author]', id: 'record_author'
         .field
-          = f.label :pages
-          = f.number_field :pages, min: 1, step: 1, required: true, name: 'records[][pages]'
+          = label_tag :pages
+          = number_field_tag :pages, '', min: 1, step: 1, required: true, name: 'records[][pages]', id: 'record_pages'
         .field
-          = f.label :dewey_decimal_code
-          = f.text_field :dewey_decimal_code, required: true, name: 'records[][dewey_decimal_code]'
+          = label_tag :dewey_decimal_code
+          = text_field_tag :dewey_decimal_code, '', required: true, name: 'records[][dewey_decimal_code]', id: 'record_dewey_decimal_code'
         .field 
-          = f.select 'book_read_status', options_for_select(book_read_status__options_for_select),  name: 'records[][book_read_status]'
+          = select_tag :book_read_status, options_for_select([["unread", "unread"], ["partially", "partially"], ["fully", "fully"] ], "unread"),  name: 'records[][book_read_status]', id: 'record_book_read_status'
         .field  
-          = button_tag 'delete', data: {class: 'delete-record-button'}
-        .field
-          = button_tag :reset, type: :reset
+          = button_tag 'delete', data: { class: 'delete-record-button'}
 
 fieldset
   legend Upload Records File (JSON, XML, CSV)
-  = form_tag reports_path, {multipart: true, method: :post} do 
+  = form_tag reports_path, { multipart: true, method: :post, id: 'file_upload_creation_form' } do 
     = file_field_tag :file, name: 'records[file]'
     = submit_tag 'Create Report'
