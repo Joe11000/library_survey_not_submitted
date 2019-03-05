@@ -1,0 +1,45 @@
+{
+    "category_breakdown": {
+        "100": {
+            "name": "Philosophy & Psychology",
+            "pages_read": 2
+        },
+        "200": {
+            "name": "Religion",
+            "pages_read": 2
+        },
+        "300": {
+            "name": "Social Sciences",
+            "pages_read": 2
+        },
+        "400": {
+            "name": "Language",
+            "pages_read": 2
+        },
+        "500": {
+            "name": "Pure Science",
+            "pages_read": 2
+        },
+        "600": {
+            "name": "Applied Science",
+            "pages_read": 2
+        },
+        "700": {
+            "name": "Arts & Recreation",
+            "pages_read": 2
+        },
+        "800": {
+            "name": "Literature",
+            "pages_read": 2
+        },
+        "900": {
+            "name": "History & Geography",
+            "pages_read": 2
+        },
+        "000": {
+            "name": "Computer Science, Information & General Works",
+            "pages_read": 2
+        }
+    },
+    "total_pages_read": 20
+}

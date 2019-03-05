@@ -2,7 +2,6 @@ class ReportsController < ApplicationController
 
   # GET /reports/new
   def new
-    @record = Record.new
   end
   
   # POST /reports
@@ -33,7 +32,6 @@ class ReportsController < ApplicationController
       end    
     end  
   end
-  
   
   private
 

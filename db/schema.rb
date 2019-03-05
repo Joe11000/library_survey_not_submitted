@@ -10,19 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_194309) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "records", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "author", null: false
-    t.integer "pages", null: false
-    t.string "dewey_decimal_code", null: false
-    t.integer "book_read_status", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end
