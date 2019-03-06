@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe FileParser::XMLParser do
+RSpec.describe FileParser::CSVRecordParser do
 
   context 'returns an array of hashes(records) for a' do
     context 'multirecord file upload' do
-      let(:file_location) { './spec/fixtures/request_bodies//xml_files/multi_record_upload.xml' }
+      let(:file_location) { './spec/fixtures/request_bodies/csv_files/multi_record_upload.csv' }
       let(:expected_result) {
           [{"author" => "Programmer 1",
                "book_read_status" => "fully",
@@ -20,12 +20,12 @@ RSpec.describe FileParser::XMLParser do
                "book_read_status" => "fully",
                "dewey_decimal_code" => "120.563DUC",
                "pages" => "1",
-               "title" => "Philosophy &amp; Psychology 1"},
+               "title" => "Philosophy & Psychology 1"},
                {"author" => "Philosopher 2",
                "book_read_status" => "partially",
                "dewey_decimal_code" => "121.563DUC",
                "pages" => "2",
-               "title" => "Philosophy &amp; Psychology 2"},
+               "title" => "Philosophy & Psychology 2"},
                {"author" => "Religioner 1",
                "book_read_status" => "fully",
                "dewey_decimal_code" => "220.563DUC",
@@ -76,16 +76,16 @@ RSpec.describe FileParser::XMLParser do
                "dewey_decimal_code" => "621.563DUC",
                "pages" => "2",
                "title" => "Applied Science 2"},
-               {"author" => "Arts &amp; Recreationer 1",
+               {"author" => "Arts & Recreationer 1",
                "book_read_status" => "fully",
                "dewey_decimal_code" => "720.563DUC",
                "pages" => "1",
-               "title" => "Arts &amp; Recreation 1"},
-               {"author" => "Arts &amp; Recreationer 2",
+               "title" => "Arts & Recreation 1"},
+               {"author" => "Arts & Recreationer 2",
                "book_read_status" => "partially",
                "dewey_decimal_code" => "721.563DUC",
                "pages" => "2",
-               "title" => "Arts &amp; Recreation 2"},
+               "title" => "Arts & Recreation 2"},
                {"author" => "Literaturer 1",
                "book_read_status" => "fully",
                "dewey_decimal_code" => "820.563DUC",
@@ -96,24 +96,24 @@ RSpec.describe FileParser::XMLParser do
                "dewey_decimal_code" => "821.563DUC",
                "pages" => "2",
                "title" => "Literature 2"},
-               {"author" => "History &amp; Geographer 1",
+               {"author" => "History & Geographer 1",
                "book_read_status" => "fully",
                "dewey_decimal_code" => "920.563DUC",
                "pages" => "1",
-               "title" => "History &amp; Geography 1"},
-               {"author" => "History &amp; Geographer 2",
+               "title" => "History & Geography 1"},
+               {"author" => "History & Geographer 2",
                "book_read_status" => "partially",
                "dewey_decimal_code" => "921.563DUC",
                "pages" => "2",
-               "title" => "History &amp; Geography 2"}]
+               "title" => "History & Geography 2"}]
       }
       it 'multi record upload' do
-        expect( FileParser::XMLParser.call file_location ).to eq expected_result
+        expect( FileParser::CSVRecordParser.call file_location ).to eq expected_result
       end
     end
 
     context 'single record upload' do
-      let(:file_location) { './spec/fixtures/request_bodies//xml_files/single_record_upload.xml' }
+      let(:file_location) { './spec/fixtures/request_bodies/csv_files/single_record_upload.csv' }
       let(:expected_result) {
           [
             {
@@ -127,7 +127,7 @@ RSpec.describe FileParser::XMLParser do
       }
 
       it 'returns a hash of records for a multirecord upload' do
-        expect( FileParser::XMLParser.call file_location ).to eq expected_result
+        expect( FileParser::CSVRecordParser.call file_location ).to eq expected_result
       end
     end
   end

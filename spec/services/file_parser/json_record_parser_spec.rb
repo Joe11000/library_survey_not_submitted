@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe FileParser::JSONParser do
+RSpec.describe FileParser::JSONRecordParser do
 
   context 'returns an array of hashes(records) for a' do
     context 'multirecord file upload' do
@@ -108,7 +108,7 @@ RSpec.describe FileParser::JSONParser do
                "title" => "History &amp; Geography 2"}]
       }
       it 'multi record upload' do
-        expect( FileParser::JSONParser.call file_location ).to eq expected_result
+        expect( FileParser::JSONRecordParser.call file_location ).to eq expected_result
       end
     end
 
@@ -127,7 +127,7 @@ RSpec.describe FileParser::JSONParser do
       }
 
       it 'returns a hash of records for a multirecord upload' do
-        expect( FileParser::JSONParser.call file_location ).to eq expected_result
+        expect( FileParser::JSONRecordParser.call file_location ).to eq expected_result
       end
     end
   end

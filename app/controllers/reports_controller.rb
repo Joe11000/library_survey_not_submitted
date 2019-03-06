@@ -3,20 +3,20 @@ class ReportsController < ApplicationController
   # GET /reports/new
   def new
   end
-  
+
   # POST /reports
   # POST /reports.json
   def create
     records = if file_upload?
-      case file_upload_params['records']['file'].content_type 
-        when 'text/xml' then  FileParser::XMLParser.call( file_upload_params['records']['file'].path )
-        when 'text/csv' then  FileParser::CSVParser.call( file_upload_params['records']['file'].path )
-        when 'application/json' then FileParser::JSONParser.call( file_upload_params['records']['file'].path ) 
+      case file_upload_params['records']['file'].content_type
+        when 'text/xml' then  FileParser::XMLRecordParser.call( file_upload_params['records']['file'].path )
+        when 'text/csv' then  FileParser::CSVRecordParser.call( file_upload_params['records']['file'].path )
+        when 'application/json' then FileParser::JSONRecordParser.call( file_upload_params['records']['file'].path )
       end
     else # non file upload
       form_submission_params['records'].is_a?(Array) ? form_submission_params['records'] : [ form_submission_params['records'] ]
     end
-  
+
     begin
       @report = ReportCreator.new(records).results
 
@@ -27,12 +27,12 @@ class ReportsController < ApplicationController
     rescue => exception
       respond_to do |format|
         redirect_to :new, error: "Invalid Information", status: :unprocessable_entity
-        
+
         format.json { render status: :unprocessable_entity }
-      end    
-    end  
+      end
+    end
   end
-  
+
   private
 
   def form_submission_params
@@ -43,10 +43,10 @@ class ReportsController < ApplicationController
     params.permit({ records: [ :file ] })
   end
 
-  def file_upload? 
+  def file_upload?
     (
-      file_upload_params.try(:has_key? ,'records') && 
-      file_upload_params['records'].try(:has_key?, 'file') 
+      file_upload_params.try(:has_key? ,'records') &&
+      file_upload_params['records'].try(:has_key?, 'file')
     ) || false
   end
 end
