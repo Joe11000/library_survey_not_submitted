@@ -43,12 +43,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'puma'
 gem 'factory_bot_rails', group: [:development, :test]
-gem 'faker', group: [:development, :test]
 gem 'rspec-rails', group: :test
 gem 'rspec'
-gem 'shoulda-matchers', group: :test
 gem 'slim-rails'
-gem 'rails-erd'
 gem 'jquery-rails'
 
 
