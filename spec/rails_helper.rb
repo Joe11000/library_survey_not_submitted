@@ -16,15 +16,6 @@ end
 
 Capybara.server = :puma # Until your setup is working
 
-RSpec.configure do |config|
-  config.before(:each, type: :system) do
-    driven_by :rack_test
-  end
-
-  config.before(:each, type: :system, js: true) do
-    driven_by :selenium_chrome_headless
-  end
-end
 
 
 # Add additional requires below this line. Rails is not loaded until this point!
