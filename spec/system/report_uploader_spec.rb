@@ -142,7 +142,7 @@ RSpec.describe "ReportUploaders", type: :system do
       end
     end
 
-    context 'munipulate the screen with js', js: true do 
+    context 'munipulate the screen with js' do 
       it 'can\'t remove record if only one exist'  do 
         visit root_path
   
@@ -156,9 +156,11 @@ RSpec.describe "ReportUploaders", type: :system do
         visit root_path
   
         find('#add_record_button').click
-        expect(page.find("#manual_record_creation_form")).to have_css('fieldset', count: 2)
+        manual_record_creation_form = page.find("#manual_record_creation_form")
+
+        fieldsets = manual_record_creation_form.find_all('fieldset')
+        expect(fieldsets.length).to eq 2
         
-        fieldsets = page.find_all('fieldset')
         within fieldsets[1] do 
           fill_in 'record_title', with: "title1"
         end
@@ -167,10 +169,11 @@ RSpec.describe "ReportUploaders", type: :system do
           fill_in 'record_title', with: "title0"
           click_button 'delete'
         end
-  
-        expect(page).to have_css('#manual_record_creation_form fieldset', count: 1)
-  
-        expect(page).to have_field 'record_title', with: "title1"
+        
+        # check that the original fieldset_0 was deleted. Leaving the 
+        fieldsets = manual_record_creation_form.find_all('fieldset')
+        expect(fieldsets.length).to eq 1
+        expect(fieldsets[0]).to have_field 'record_title', with: "title1"
         expect(page).to have_no_field 'record_title', with: "title0"
       end
       
