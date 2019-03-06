@@ -1,24 +1,24 @@
-# README
+# 1) Install ruby's package manager
+    gem install bundler
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 2) Open the terminal and cd into project
 
-Things you may want to cover:
+# 3) install gems in from project
+    bundle install
 
-* Ruby version
+# 4) run the tests and make sure everything works. Comprised of RSpec request and system tests
+    rspec spec
 
-* System dependencies
+# 5) start the rails server
+    rails s
 
-* Configuration
+# 6) go to the html landing page in a browser. There you can enter records manually to create a report, or you can upload a json, xml, or csv file consisting of library records.
+    http://localhost:3000
 
-* Database creation
+# 7) Submitting either form will direct you to the html report on a seperate page ('/reports')
+    ie Sample record files to upload are 
+    json --> app/spec/fixtures/request_bodies/json_files/*
+    xml  --> app/spec/fixtures/request_bodies/xml_files/*
+    csv  --> app/spec/fixtures/request_bodies/csv_files/*
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
